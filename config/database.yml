@@ -23,7 +23,10 @@ default: &default
 
 development:
   <<: *default
-  database: OnlineShop_development
+  database: onlineshop_db
+  username: postgres
+  password: dabors
+  host: <%=ENV['IP']%>
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.

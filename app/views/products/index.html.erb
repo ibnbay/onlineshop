@@ -5,7 +5,18 @@
   <h3>All Products</h3>
 </div>
 
-
+<div class="modal fade" id="buyModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <p>Apakah kamu yakin mau membeli barang ini?</p>
+        <button class="btn btn-success" data-dismiss="modal">
+          <i class="glyphicon glyphicon-plus"></i>Tambah ke Keranjang
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
 <div class="row">
   <% @products.each do |product| %>
   <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
@@ -14,6 +25,7 @@
     <p> <%= product.description %></p>
     <h4>Rp. <%= product.price %></h4>
     <%= link_to 'Show', product, :class => "btn btn-primary" %>
+    <%= link_to 'Beli', '#', :class => "btn btn-success", :data=>{:toggle=>'modal', :target=>'#buyModal'} %>
   </div>
   <% end %>
 </div>
