@@ -17,9 +17,12 @@
       </button>
       <%= link_to 'OnlineShop', root_path, :class=>"navbar-brand" %>
     </div>
+    
+    
     <div class="collapse navbar-collapse" id="collapsibleMenu">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
+        <li><a href="#" data-toggle="modal" data-target="#shoppingCart">
+          <span class="glyphicon glyphicon-shopping-cart"></span><span class="badge">4</span></a></li>
         <li><a href="#">Home</a></li>
         <li><a href="#">About Us</a></li>
         <li><a href="#">Contact Us</a></li>
@@ -38,6 +41,19 @@
   <%= yield %>
 </div>
 
-
+<div class="modal fade" id="shoppingCart">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <p class="pull-right text-primary">
+              <b>4 items</b>
+            </p>
+            <h4 class="modal-title text-primary">
+              <span class="glyphicon glyphicon-shopping-cart">Your Cart</span>
+            </h4>
+          </div>
+        </div>
+      </div>
+    </div>
 </body>
 </html>
